@@ -17,14 +17,17 @@ public class Principal {
                     + "9 - Sair do programa"));
 			switch(opc) {
 				case 1:
+					limparTela();
 					ex[0].exe01();
 				break;
 				case 2:
+					limparTela();
 					System.out.print("Digite a frase: ");
 					String text = teclado.nextLine();
 					ex[1].exe02(text);
 				break;
 				case 3:
+					limparTela();
 					int tamanho = ex[2].TamanhoVetor();
 					int vt[] = new int [tamanho];
 					vt = ex[2].carregarVetor(vt);
@@ -33,5 +36,10 @@ public class Principal {
 			}
 		}	
 		
+	}
+	public static void limparTela() {
+		for (int i = 0; i < 50; i++) {
+            System.out.println();
+        }
 	}
 }
